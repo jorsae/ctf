@@ -1,0 +1,10 @@
+QuickR challenge:
+    1. Connect to challenge and retrieve qr code
+    2. Read qr code
+    3. Solve equation the qr code provies
+    4. Send back the answer within 3sec
+
+make terminal full screen
+make terminal font-size smaller
+
+run QuickR_src.py
