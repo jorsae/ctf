@@ -1,0 +1,37 @@
+cipher to solve:
+KSVVW BGSJD SVSIS VXBMN YQUUK BNWCU ANMJS 
+
+
+INFORMATION:
+S = E | 100%
+jds = 'the'?
+
+took most frequent letters in all 3 files combined
+and swapped towards the respective frequent letter in the english alphabet
+result: GELLC ISEAR ELEKE LFIUN MTOOG INCHO BNUAE 
+swap = {'S':'E',
+	'Q':'T',
+	'J':'A',
+	'U':'O',
+	'B':'I',
+	'N':'N',
+	'G':'S',
+	'C':'H',
+	'D':'R',
+	'Z':'D',
+	'V':'L',
+	'W':'C',
+	'M':'U',
+	'Y':'M',
+	'T':'W',
+	'X':'F',
+	'K':'G',
+	'E':'Y',
+	'L':'P',
+	'A':'B',
+	'F':'V',
+	'I':'K',
+	'O':'J',
+	'H':'X',
+	'R':'Q',
+	'P':'Z',}

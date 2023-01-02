@@ -1,0 +1,6 @@
+convert base 64
+
+echo S1JZUFRPTklTR1JFQVQ= | base64 -d
+
+
+KRYPTONISGREAT
