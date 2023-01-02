@@ -1,0 +1,36 @@
+0ld is g0ld:
+    Step 1.
+        Get the hash from pdf:
+            "The script pdf2john.py doesn't exist anymore. It has been substituted by a perl version, pdf2john.pl.
+
+            Extracted from HashCat Forums, this method works for me (requires Perl):
+
+            --Download pdf2john.pl from the suite John the Ripper (OCLHashCat works with the same hash format as John the Ripper):
+
+            wget https://github.com/magnumripper/JohnTheRipper/archive/bleeding-jumbo.zip  
+            unzip bleeding-jumbo.zip  
+            --Use it to extract the hash from your .pdf file:
+
+            perl JohnTheRipper-bleeding-jumbo/run/pdf2john.pl MyPDF.pdf > MyPDF-Hash.txt
+            --Output file MyPDF-Hash.txt must be edited. Original would be something like:
+
+            MyPDF.pdf:$pdf$4*4*128*1028*1*16*652fc762fdb12c47a5f90ddd2b99b809*32*dd86d858f914809078a4a47348d32c0fc4e9c08042a10e6434b48b698de7731f*32*3c1e693526d5bc8da15b99eea6cbc6ed2c2397e23e2c39d1974fdc004c588cff:::::MyPDF.pdf
+            so use your preferred editor:
+
+            nano MyPDF-Hash.txt
+            notepad MyPDF-Hash.txt
+            and leave only the part inside double colons : :
+
+            $pdf$4*4*128*1028*1*16*652fc762fdb12c47a5f90ddd2b99b809*32*dd86d858f914809078a4a47348d32c0fc4e9c08042a10e6434b48b698de7731f*32*3c1e693526d5bc8da15b99eea6cbc6ed2c2397e23e2c39d1974fdc004c588cff
+            --Hint: you can do the extraction and the edition in one step by using sed (UnxUtils version too, if you are doing it from Windows):
+
+            perl JohnTheRipper-bleeding-jumbo/run/pdf2john.pl MyPDF.pdf | sed "s/::.*$//" | sed "s/^.*://" > MyPDF-Hash.txt
+            --Your MyPDF-Hash.txt file is now ready to use with OCLHashCat (or John the Ripper)."
+    Step 2.
+        Start John the ripper on the file with the hash:
+            john <file.txt> --dictionary=<dictionaryfile>
+    Password to pdf file: jumanji69
+    pdf file contain morse code: .-. .---- .--. ... .- -- ..- ...-- .-.. -- ----- .-. ... ...--
+    morse code decoder: (https://gchq.github.io/CyberChef/#recipe=From_Morse_Code('Space','Line%20feed')&input=Li0uIC4tLS0tIC4tLS4gLi4uIC4tIC0tIC4uLSAuLi4tLSAuLS4uIC0tIC0tLS0tIC4tLiAuLi4gLi4uLS0)
+    Translates to: R1PSAMU3LM0RS3
+    Flag: HTB{R1PSAMU3LM0RS3}
