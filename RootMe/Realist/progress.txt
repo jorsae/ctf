@@ -1,0 +1,10 @@
+It happens, sometimes:
+    Used util dir.py program and found
+        /images
+        /admin
+    images, had just icon.
+    http://challenge01.root-me.org/realiste/ch3/admin/
+    had authentication with Basic Realm.
+    Google for bypass, found "GETS" request.
+    run r1.py
+    Password: 0010110111101001

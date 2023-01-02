@@ -1,0 +1,18 @@
+Encoding - ASCII:
+    py c1.py | python3 -c 'import binascii;print(binascii.unhexlify("4C6520666C6167206465206365206368616C6C656E6765206573743A203261633337363438316165353436636436383964356239313237356433323465"))'
+    Password: 2ac376481ae546cd689d5b91275d324e
+Encoding - UU:
+    py c2.py 
+    Password: ULTRASIMPLE
+Hash - Message Digest 5:
+    crackstation.net -> 7ecc19e1a0be36ba2c6f05d06b5d3058
+    Password: weak
+SHA-2:
+    c4.py
+    Password: a7c9d5a37201c08c5b7b156173bea5ec2063edf9
+Shift cipher:
+    py c5.py
+    Password: Yolaihu
+Monoalphabetic substitution - Caesar:
+    c9.py
+    Password: ujqcsddessxsffes

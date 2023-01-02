@@ -1,0 +1,8 @@
+Gunnm:
+    On image it says: "pass = Totoro"
+    Totoro
+
+Squared:
+    used strings on image and revealed "pass=HAHA"
+    HAHA
+

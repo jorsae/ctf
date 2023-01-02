@@ -1,0 +1,14 @@
+FTP - authentication:
+    Follow tcp stream. username: cdts3500
+    Password: cdts3500
+TELNET - authentication:
+    Follow tcp stream. username: fake
+    Password: user
+ETHERNET - frame:
+    n3.py
+    Password: confi:dential
+Twitter:
+    Follow tcp stream -> dXNlcnRlc3Q6cGFzc3dvcmQ=
+    py -c 'import base64;print(base64.b64decode(\"dXNlcnRlc3Q6cGFzc3dvcmQ=\".encode()).decode())'
+    usertest:password
+    Password: password
