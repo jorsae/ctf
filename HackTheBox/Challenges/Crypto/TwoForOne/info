@@ -1,0 +1,15 @@
+Aftering checking both keys they are very similar.
+
+Using the following command we can check the exponent:
+openssl rsa -in key1.pem -pubin -noout -text
+	Exponent: 65,537
+
+openssl rsa -in key2.pem -pubin -noout -text
+	Exponent: 343,223
+
+There is no way to generate a private key to decrypt them from just the public key.
+But they are vulnerable to a common modulus attack.
+
+Used https://github.com/HexPandaa/RSA-Common-Modulus-Attack
+and cracked the password: 
+HTB{C0mmon_M0dUlu5S_1S_b4D}
