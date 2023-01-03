@@ -1,0 +1,12 @@
+After checking the source code, it's clear that the token was in 
+config.json 'token' field.
+
+checking previous git log gives nothing.
+
+However being in master branch and doing a git diff to ddc606f8fa05c363ea4de20f31834e97dd527381
+and we can see the token
+
+SFRCe3YzcnNpMG5fYzBudHIwbF9hbV9JX3JpZ2h0P30=
+
+base64 decode and we get the flag
+HTB{v3rsi0n_c0ntr0l_am_I_right?}
