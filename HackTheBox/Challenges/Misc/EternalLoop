@@ -1,7 +1,7 @@
-Download Eternal_Loop.zip
-After unzip and some testing, the password for the next zip file is the name of the zip file inside.
+# Download Eternal_Loop.zip
+# After unzip and some testing, the password for the next zip file is the name of the zip file inside.
 
-Write a script to automate this process
+# Write a script to automate this process
 import zipfile
 
 done = False
@@ -20,13 +20,13 @@ while True:
     password = new_zip.split('.')[0]
     zf.extractall(pwd=password.encode())
 
-After reaching the last zipfile '6969.zip' the password DoNotTouch does not work.
-Bruteforce the password with fcrackzip:
-    fcrackzip -u -D -p '/usr/share/wordlists/rockyou.txt' 6969.zip -v
+# After reaching the last zipfile '6969.zip' the password DoNotTouch does not work.
+# Bruteforce the password with fcrackzip:
+#     fcrackzip -u -D -p '/usr/share/wordlists/rockyou.txt' 6969.zip -v
 
-DoNotTouch is a sqlite file with bunch of records
-Have to find the flag inside all the noise.
-Write script to dump the entire database
+# DoNotTouch is a sqlite file with bunch of records
+# Have to find the flag inside all the noise.
+# Write script to dump the entire database
 
 import sqlite3
 import os
@@ -43,5 +43,5 @@ with sqlite3.connect(filename) as conn:
             for field in row.keys():
                 print(table, field, row[field])
 
-cat the database dump and grep for "htb"
-found the flag
+# cat the database dump and grep for "htb"
+# found the flag

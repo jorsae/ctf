@@ -1,5 +1,5 @@
-subfolders have numbers in them
-make program to write the program of the directory in the order of the filenames
+# subfolders have numbers in them
+# make program to write the program of the directory in the order of the filenames
 
 import os, re
 import glob
@@ -21,4 +21,4 @@ order = ''.join(order)
 order = re.sub('\d{2}:', '', order)
 print(order)
 
-take output and base64 decode and we get the flag
+# take output and base64 decode and we get the flag
