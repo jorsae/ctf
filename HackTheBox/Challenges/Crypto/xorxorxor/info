@@ -1,0 +1,17 @@
+XOR is bidirectional
+a ^ b = c
+c ^ b = a
+c ^ a = b
+
+HTB flag format starts with HTB{
+We can also see that the key is 4 characters long and that the flag is in hex.
+
+therefore by xor the start of the output.txt with the HTB{
+we can get the key
+    13 ^ H = key1
+    4a ^ T = key2
+    f6 ^ B = key3
+    e1 ^ { = key4
+
+Once we have all the keys, we just need to xor the entire output
+and we get HTB{rep34t3d_x0r_n0t_s0_s3cur3}
